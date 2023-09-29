@@ -1,12 +1,14 @@
 .root {
-  height: 550px;
+  height: 370px;
+  padding: 0 20px;
+  margin-top: 20px;
 }
 
 .content {
   display: flex;
-  gap: 50px;
+  gap: 37px;
   flex-wrap: wrap;
-  margin-top: 30px;
+  margin-top: 20px;
   height: fit-content;
 }
 

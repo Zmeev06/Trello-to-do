@@ -12,7 +12,7 @@ interface PaginateProps {
 export const Paginate = ({ projects }: PaginateProps) => {
   const [totalPages, setTotalPages] = useState(0)
   useEffect(() => {
-    setTotalPages(Math.ceil(projects.length / 12))
+    setTotalPages(Math.ceil(projects.length / 8))
   }, [projects])
 
   const currentPage = useAppSelector(selectPaginate)

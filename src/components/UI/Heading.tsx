@@ -5,6 +5,8 @@ interface HeadingProps {
   mt?: number
   mb?: number
   fontWeight?: number
+  ml?: number
+  mr?: number
 }
 
 export const Heading = ({
@@ -13,6 +15,8 @@ export const Heading = ({
   fontSize,
   mt,
   mb,
+  ml,
+  mr,
   fontWeight = 400,
 }: HeadingProps) => {
   return (
@@ -22,6 +26,8 @@ export const Heading = ({
         fontSize,
         marginTop: mt,
         marginBottom: mb,
+        marginLeft: ml,
+        marginRight: mr,
         fontWeight,
       }}
     >

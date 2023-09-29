@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import { Button } from '../Button'
 import { Heading } from '../Heading'
 import styles from './style.module.scss'
@@ -28,7 +28,11 @@ export const Modal = ({
       setIsEmpty(true)
     } else {
       if (type === 'create' && forWhat === 'project') {
-        dispath(addProject({ id: Date.now(), title: value }))
+        const project = {
+          id: Date.now(),
+          title: value,
+        }
+        dispath(addProject(project))
       } else if (type === 'edit' && forWhat === 'project') {
         dispath(editProject({ id, title: value }))
       }

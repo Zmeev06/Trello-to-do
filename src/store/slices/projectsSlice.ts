@@ -17,10 +17,10 @@ export const projectsSlice = createSlice({
   initialState,
   reducers: {
     addProject: (state, action: PayloadAction<IProject>) => {
-      state.value = [
-        ...state.value,
-        { id: action.payload.id, title: action.payload.title },
-      ]
+      state.value.unshift({
+        id: action.payload.id,
+        title: action.payload.title,
+      })
     },
     deleteProject: (state, action: PayloadAction<number>) => {
       state.value = state.value.filter((e) => e.id !== action.payload)

@@ -7,6 +7,8 @@ interface ButtonProps {
   bg?: string
   border?: string
   m?: string
+  onClick?: () => void
+  borderRadius?: number
 }
 
 export const Button = ({
@@ -18,6 +20,8 @@ export const Button = ({
   text,
   border,
   m,
+  borderRadius,
+  onClick,
 }: ButtonProps) => {
   return (
     <button
@@ -29,8 +33,10 @@ export const Button = ({
         transition: '.3s',
         border,
         margin: m,
+        borderRadius
       }}
       className={className}
+      onClick={onClick}
     >
       {text}
     </button>

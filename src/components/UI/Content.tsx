@@ -1,9 +1,11 @@
 interface ContentProps {
-  children: string | JSX.Element | JSX.Element[]
+  children: string | boolean | JSX.Element | JSX.Element[]
   maxW?: 'sm' | 'md' | 'lg'
   mt?: number
   className?: string
   mb?: number
+  pt?: number
+  pb?: number
 }
 
 export const Content = ({
@@ -12,6 +14,8 @@ export const Content = ({
   mt,
   className,
   mb,
+  pt,
+  pb,
 }: ContentProps) => {
   return (
     <div
@@ -29,6 +33,8 @@ export const Content = ({
         margin: '0 auto',
         marginTop: mt,
         marginBottom: mb,
+        paddingTop: pt,
+        paddingBottom: pb,
       }}
     >
       {children}

@@ -4,6 +4,7 @@ interface HeadingProps {
   fontSize?: number
   mt?: number
   mb?: number
+  fontWeight?: number
 }
 
 export const Heading = ({
@@ -12,6 +13,7 @@ export const Heading = ({
   fontSize,
   mt,
   mb,
+  fontWeight = 400,
 }: HeadingProps) => {
   return (
     <h1
@@ -20,6 +22,7 @@ export const Heading = ({
         fontSize,
         marginTop: mt,
         marginBottom: mb,
+        fontWeight,
       }}
     >
       {children}
